@@ -1,0 +1,37 @@
+/*
+James Arnold Nieves
+Noverber 22, 2024
+Drawing in Java
+*/
+package drawing;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class MyFirstCircle extends Canvas {
+    public void paint(Graphics draw){
+        draw.setColor(Color.PINK);
+        draw.drawRect(50, 50, 150, 100);
+        draw.setColor(Color.red);
+        draw.fillRect(250, 50, 150, 100);
+        draw.setColor(Color.blue);
+        draw.drawOval(450,50,100,100);
+        draw.setColor(Color.green);
+        draw.fillOval(600,50,100,100);
+        draw.drawLine(50,200,700,200);
+        draw.setColor(Color.red);
+        draw.drawLine(775,50,750,150);
+        draw.drawLine(775,50,800,150);
+        draw.drawLine(750,150,800,150);
+        
+        
+}
+    public static void main(String [] args){
+        JFrame f=new JFrame ("James's First Drawing");
+        MyFirstCircle canvas =new MyFirstCircle();
+        f.setSize(1000,1000);
+        f.add(canvas);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+    }
+}
